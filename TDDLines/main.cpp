@@ -18,8 +18,8 @@ using namespace std;
 TEST_CASE("Line Test") {
     
     Point p1(1.2, 2.4);
-    
-    REQUIRE(p1.getCoordinates() == "X:1.2 Y:2.4");
+    string test = "X:" + p1.getXString() + " , Y:" + p1.getYString();
+    REQUIRE(test == p1.getCoordinates());
     
 };
 

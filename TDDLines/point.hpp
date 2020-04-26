@@ -22,5 +22,9 @@ public:
     void setCoordinates(double x, double y);
     string getCoordinates();
     Point(double x, double y);
+    string getXString();
+    string getYString();
+
+
 
 };

@@ -8,6 +8,7 @@
 
 #include "point.hpp"
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -21,12 +22,23 @@ void Point::setCoordinates(double x, double y){
 };
 
 string Point::getCoordinates(){
-    string retString;
-    string x = to_string(xVal);
-    string y = to_string(yVal);
     
-    retString = "X:" + x + " " + "Y:" + y;
     
-    return retString;
+    return "X:" + getXString() +" , Y:" + getYString();
+}
+
+string Point::getXString()
+{
+    string retVal = to_string(xVal);
+    return retVal;
+
+
+}
+
+string Point::getYString()
+{
+    string retVal = to_string(yVal);
+    return retVal;
+
 }
 
