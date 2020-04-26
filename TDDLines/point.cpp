@@ -29,16 +29,18 @@ string Point::getCoordinates(){
 
 string Point::getXString()
 {
-    string retVal = to_string(xVal);
-    return retVal;
+    stringstream temp;
+    temp << xVal;
+    return temp.str();
 
 
 }
 
 string Point::getYString()
 {
-    string retVal = to_string(yVal);
-    return retVal;
+    stringstream temp;
+    temp << yVal;
+    return temp.str();
 
 }
 

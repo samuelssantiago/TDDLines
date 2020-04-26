@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <sstream>
 #define CATCH_CONFIG_MAIN
 
 #include "catch.hpp"
@@ -18,6 +19,18 @@ using namespace std;
 TEST_CASE("Line Test") {
     
     Point p1(1.2, 2.4);
+    double d1 = 1.2;
+    double d2 = 2.4;
+    stringstream point;
+    point << d1;
+    REQUIRE(p1.getXString() == point.str());
+
+    stringstream point2;
+    point2 << d2;
+    REQUIRE(p1.getYString() == point2.str());
+    REQUIRE(p1.getXString() != point2.str());
+
+
     string test = "X:" + p1.getXString() + " , Y:" + p1.getYString();
     REQUIRE(test == p1.getCoordinates());
     
