@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C90BEC2B24563F94004E9E17 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90BEC2A24563F94004E9E17 /* main.cpp */; };
+		C90BEC34245641DC004E9E17 /* line.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90BEC32245641DC004E9E17 /* line.cpp */; };
+		C90BEC3724564222004E9E17 /* point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90BEC3524564222004E9E17 /* point.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		C90BEC2724563F94004E9E17 /* TDDLines */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TDDLines; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90BEC2A24563F94004E9E17 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C90BEC312456411E004E9E17 /* catch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
+		C90BEC32245641DC004E9E17 /* line.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = line.cpp; sourceTree = "<group>"; };
+		C90BEC33245641DC004E9E17 /* line.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = line.hpp; sourceTree = "<group>"; };
+		C90BEC3524564222004E9E17 /* point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = point.cpp; sourceTree = "<group>"; };
+		C90BEC3624564222004E9E17 /* point.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = point.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +64,12 @@
 		C90BEC2924563F94004E9E17 /* TDDLines */ = {
 			isa = PBXGroup;
 			children = (
+				C90BEC312456411E004E9E17 /* catch.hpp */,
 				C90BEC2A24563F94004E9E17 /* main.cpp */,
+				C90BEC3524564222004E9E17 /* point.cpp */,
+				C90BEC3624564222004E9E17 /* point.hpp */,
+				C90BEC32245641DC004E9E17 /* line.cpp */,
+				C90BEC33245641DC004E9E17 /* line.hpp */,
 			);
 			path = TDDLines;
 			sourceTree = "<group>";
@@ -120,6 +132,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C90BEC2B24563F94004E9E17 /* main.cpp in Sources */,
+				C90BEC34245641DC004E9E17 /* line.cpp in Sources */,
+				C90BEC3724564222004E9E17 /* point.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

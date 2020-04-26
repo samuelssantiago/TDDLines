@@ -7,9 +7,19 @@
 //
 
 #include <iostream>
+#define CATCH_CONFIG_MAIN
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
-}
+#include "catch.hpp"
+#include "line.hpp"
+#include "point.hpp"
+
+using namespace std;
+
+TEST_CASE("Line Test") {
+    
+    Point p1(1.2, 2.4);
+    
+    REQUIRE(p1.getCoordinates() == "X:1.2 Y:2.4");
+    
+};
+
