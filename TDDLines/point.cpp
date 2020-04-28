@@ -49,3 +49,12 @@ string Point::getYString()
 
 }
 
+double Point::getXCoord()
+{
+    return xVal;
+}
+
+double Point::getYCoord()
+{
+    return yVal;
+}

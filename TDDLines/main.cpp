@@ -32,6 +32,13 @@ TEST_CASE("Line Test") {
 
     REQUIRE_THROWS(Point(-.6, 2.5));
 
+    double d3 = 3.8;
+    double d4 = 1.9;
+    Point p2(d3,d4);
+
+    REQUIRE(p2.getXCoord() == d3);
+    REQUIRE(p2.getYCoord() == d4);
+
     string test = "X:" + p1.getXString() + " , Y:" + p1.getYString();
     REQUIRE(test == p1.getCoordinates());
     

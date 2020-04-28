@@ -24,7 +24,8 @@ public:
     Point(double x, double y);
     string getXString();
     string getYString();
-
+    double getXCoord();
+    double getYCoord();
 
 
 };
