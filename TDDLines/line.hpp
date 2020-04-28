@@ -22,5 +22,6 @@ class Line
     Line(Point ip1, Point ip2);
     Point getPoint1();
     Point getPoint2();
+    double length();
 };
 
