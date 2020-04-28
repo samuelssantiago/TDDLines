@@ -20,6 +20,7 @@ class Line
     public:
 
     Line(Point ip1, Point ip2);
-
+    Point getPoint1();
+    Point getPoint2();
 };
 

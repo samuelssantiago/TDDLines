@@ -49,7 +49,11 @@ TEST_CASE("Line Tests")
 
     Point p11(1.2, 1.4);
     Point p12(3.7, 2.5);
-    Line(p11,p12);
+    Line l1(p11,p12);
+    Point testpoint = l1.getPoint1();
+    Point testpoint2 = l1.getPoint2();
+    REQUIRE(testpoint.getCoordinates() == p11.getCoordinates());
+    REQUIRE(testpoint2.getCoordinates() == p12.getCoordinates());
 
 };
 

@@ -13,3 +13,12 @@ Line::Line(Point ip1, Point ip2)
 {
 
 }
+
+Point Line::getPoint1()
+{
+    return point1;
+}
+Point Line::getPoint2()
+{
+    return point2;
+}
