@@ -16,7 +16,7 @@
 
 using namespace std;
 
-TEST_CASE("Line Test") {
+TEST_CASE("Point Test") {
     
     Point p1(1.2, 2.4);
     double d1 = 1.2;
@@ -42,5 +42,14 @@ TEST_CASE("Line Test") {
     string test = "X:" + p1.getXString() + " , Y:" + p1.getYString();
     REQUIRE(test == p1.getCoordinates());
     
+};
+
+TEST_CASE("Line Tests")
+{
+
+    Point p11(1.2, 1.4);
+    Point p12(3.7, 2.5);
+    Line(p11,p12);
+
 };
 

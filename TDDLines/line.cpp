@@ -8,4 +8,8 @@
 
 #include "line.hpp"
 
+Line::Line(Point ip1, Point ip2)
+:point1(ip1),point2(ip2)
+{
 
+}

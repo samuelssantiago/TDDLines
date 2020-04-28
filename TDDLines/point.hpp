@@ -6,7 +6,7 @@
 //  Copyright © 2020 Samuel Santiago. All rights reserved.
 //
 
-#pragma Once
+#pragma once
 
 #include <stdio.h>
 #include <string>

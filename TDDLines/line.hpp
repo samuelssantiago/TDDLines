@@ -6,9 +6,20 @@
 //  Copyright © 2020 Samuel Santiago. All rights reserved.
 //
 
-#ifndef line_hpp
-#define line_hpp
+#pragma once
 
 #include <stdio.h>
+#include "point.hpp"
 
-#endif /* line_hpp */
+class Line
+{
+
+    Point point1;
+    Point point2;
+
+    public:
+
+    Line(Point ip1, Point ip2);
+
+};
+
