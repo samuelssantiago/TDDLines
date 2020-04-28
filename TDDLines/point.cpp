@@ -13,6 +13,11 @@
 using namespace std;
 
 Point::Point(double x, double y){
+
+    if (x < 0.0 || y < 0.0)
+    {
+        throw "Uh Oh. Can not have points in the negative quadrants.";
+    }
     setCoordinates(x, y);
 };
 

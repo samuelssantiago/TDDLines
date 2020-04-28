@@ -30,11 +30,7 @@ TEST_CASE("Line Test") {
     REQUIRE(p1.getYString() == point2.str());
     REQUIRE(p1.getXString() != point2.str());
 
-    Point p2(-.6, 2.5);
-    double d3 = -.6;
-    stringstream point3;
-    point3 << d3;
-    REQUIRE(p2.getXString() == point3.str());
+    REQUIRE_THROWS(Point(-.6, 2.5));
 
     string test = "X:" + p1.getXString() + " , Y:" + p1.getYString();
     REQUIRE(test == p1.getCoordinates());
