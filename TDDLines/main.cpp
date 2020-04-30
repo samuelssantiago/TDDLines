@@ -64,5 +64,21 @@ TEST_CASE("Line Tests")
     Point lengthP4(1,2);
     Line ln2(lengthP3,lengthP4);
     REQUIRE(ln2.length() == 1.0);
+
+    Point lengthP5(1, 1);
+    Point lengthP6(3, 3);
+    Line ln3(lengthP5, lengthP6);
+    REQUIRE(ln3.generateSlope() == 1);
+    REQUIRE(ln3.generateYIntercept() == 0);
+
+    Point lengthP7(2, 2);
+    Point lengthP8(7, 8);
+    REQUIRE(ln2.isOnLine(lengthP7));
+    REQUIRE(ln2.isOnLine(lengthP6));
+    REQUIRE(!ln2.isOnLine(lengthP8));
+
+
+
+
 };
 

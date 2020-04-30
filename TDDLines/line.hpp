@@ -16,6 +16,8 @@ class Line
 
     Point point1;
     Point point2;
+    double slope;
+    double yIntercept;
 
     public:
 
@@ -23,5 +25,8 @@ class Line
     Point getPoint1();
     Point getPoint2();
     double length();
+    double generateSlope();
+    double generateYIntercept();
+    bool isOnLine(Point p);
 };
 

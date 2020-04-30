@@ -11,7 +11,8 @@
 Line::Line(Point ip1, Point ip2)
 :point1(ip1),point2(ip2)
 {
-
+    slope = generateSlope();
+    yIntercept = generateYIntercept();
 }
 
 Point Line::getPoint1()
@@ -25,4 +26,24 @@ Point Line::getPoint2()
 double Line::length()
 {
     return sqrt(pow(point1.getYCoord() - point2.getYCoord(),2) + pow(point1.getXCoord() - point2.getXCoord(),2));
+}
+
+double Line::generateSlope()
+{
+    return (point1.getYCoord() - point2.getYCoord()) / (point1.getXCoord() - point2.getXCoord());
+}
+
+double Line::generateYIntercept()
+{
+    //   y = mx + b
+    double mx = slope * point1.getXCoord();
+    return point1.getYCoord() - mx;
+
+}
+
+bool Line::isOnLine(Point p)
+{
+
+
+    return false;
 }
