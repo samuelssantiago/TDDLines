@@ -43,7 +43,11 @@ double Line::generateYIntercept()
 
 bool Line::isOnLine(Point p)
 {
+    bool retVal = false;
+    if (p.getYCoord() == slope * p.getXCoord() + yIntercept)
+    {
+        retVal = true;
+    }
 
-
-    return false;
+    return retVal;
 }

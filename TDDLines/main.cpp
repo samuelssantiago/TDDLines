@@ -73,9 +73,9 @@ TEST_CASE("Line Tests")
 
     Point lengthP7(2, 2);
     Point lengthP8(7, 8);
-    REQUIRE(ln2.isOnLine(lengthP7));
-    REQUIRE(ln2.isOnLine(lengthP6));
-    REQUIRE(!ln2.isOnLine(lengthP8));
+    REQUIRE(ln3.isOnLine(lengthP7));
+    REQUIRE(ln3.isOnLine(lengthP6));
+    REQUIRE(!ln3.isOnLine(lengthP8));
 
 
 
