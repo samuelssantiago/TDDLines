@@ -51,3 +51,12 @@ bool Line::isOnLine(Point p)
 
     return retVal;
 }
+
+bool Line::isParrallel(Line l)
+{
+    if (abs(slope - l.slope) < .000001)
+    {
+        return true;
+    }
+    return false;
+}

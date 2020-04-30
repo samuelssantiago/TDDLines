@@ -77,8 +77,10 @@ TEST_CASE("Line Tests")
     REQUIRE(ln3.isOnLine(lengthP6));
     REQUIRE(!ln3.isOnLine(lengthP8));
 
-
-
+    Point p13(2,2);
+    Point p14(4,4);
+    Line par(p13,p14);
+    REQUIRE(par.isParrallel(ln3));
 
 };
 

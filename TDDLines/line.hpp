@@ -28,5 +28,6 @@ class Line
     double generateSlope();
     double generateYIntercept();
     bool isOnLine(Point p);
+    bool isParrallel(Line l);
 };
 
