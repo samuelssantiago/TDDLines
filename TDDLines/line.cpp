@@ -35,7 +35,7 @@ double Line::generateSlope()
 
 double Line::generateYIntercept()
 {
-    //   y = mx + b
+    //y = mx + b
     double mx = slope * point1.getXCoord();
     return point1.getYCoord() - mx;
 
@@ -44,7 +44,11 @@ double Line::generateYIntercept()
 bool Line::isOnLine(Point p)
 {
     bool retVal = false;
-    if (p.getYCoord() == slope * p.getXCoord() + yIntercept)
+    double ytemp = slope * p.getXCoord() + yIntercept;
+    double deleteme = p.getYCoord();
+    double tester = abs(ytemp - p.getYCoord());
+
+    if (tester <= 0.000001)
     {
         retVal = true;
     }
@@ -77,7 +81,25 @@ bool Line::isIntersecting(Line l)
     }
 
 
+    //line 1
+    //slope1*x + yIntercept1 = slope2*x + yIntercept2
 
+    double deleteme = l.yIntercept;
+    
+    double slopeTemp = slope - l.slope;
+    double ytemp = l.yIntercept - yIntercept;
+    double intersect = ytemp / slopeTemp;
+
+    double y = slope * intersect + yIntercept;
+    Point temp(intersect, y);
+    
+
+
+    if (isOnLine(temp) && l.isOnLine(temp))
+    {
+        retVal = true;
+    }
+    
 
     return retVal;
 }

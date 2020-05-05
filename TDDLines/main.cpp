@@ -73,9 +73,11 @@ TEST_CASE("Line Tests")
 
     Point lengthP7(2, 2);
     Point lengthP8(7, 8);
+    Point length9(4, 4);
     REQUIRE(ln3.isOnLine(lengthP7));
     REQUIRE(ln3.isOnLine(lengthP6));
     REQUIRE(!ln3.isOnLine(lengthP8));
+    REQUIRE(ln3.isOnLine(length9));
 
     Point p13(2,2);
     Point p14(4,4);
@@ -83,14 +85,14 @@ TEST_CASE("Line Tests")
     REQUIRE(par.isParrallel(ln3));
 
 
-    Point p15(1, 1);
+   /* Point p15(1, 1);
     Point p16(3, 3);
     Point p17(2, 2);
     Point p18(1, 1);
     Line intersect(p15, p16);
     Line intersect2(p17, p18);
     REQUIRE(!intersect.isIntersecting(intersect2));
-
+    
     Point p19(2, 2);
     Point p20(5, 3);
     Point p21(2, 2);
@@ -98,6 +100,25 @@ TEST_CASE("Line Tests")
     Line intersect3(p19, p20);
     Line intersect4(p21, p22);
     REQUIRE(intersect3.isIntersecting(intersect4));
+
+
+    Point p23(15,10);
+    Point p24(49, 25);
+    Point p25(29,5);
+    Point p26(32, 32);
+    Line intersect5(p23, p24);
+    Line intersect6(p25, p26);
+    REQUIRE(intersect5.isIntersecting(intersect6));*/
+
+
+  /*  Point p27(2, 3);
+    Point p28(1, 4);
+    Point p29(5, 7);
+    Point p30(10, 9);
+    Line intersect7(p27, p28);
+    Line intersect8(p29, p30);
+    REQUIRE(!intersect7.isIntersecting(intersect8));*/
+
 
 };
 
