@@ -60,3 +60,24 @@ bool Line::isParrallel(Line l)
     }
     return false;
 }
+
+
+bool Line::isIntersecting(Line l)
+{
+
+    bool retVal = false;
+
+    if (isParrallel(l))
+    {
+        //
+    }
+    else if (isOnLine(l.getPoint1()) || isOnLine(l.getPoint2()))
+    {
+        retVal = true;
+    }
+
+
+
+
+    return retVal;
+}

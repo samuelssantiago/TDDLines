@@ -29,5 +29,6 @@ class Line
     double generateYIntercept();
     bool isOnLine(Point p);
     bool isParrallel(Line l);
+    bool isIntersecting(Line l);
 };
 

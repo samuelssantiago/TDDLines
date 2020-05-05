@@ -82,5 +82,22 @@ TEST_CASE("Line Tests")
     Line par(p13,p14);
     REQUIRE(par.isParrallel(ln3));
 
+
+    Point p15(1, 1);
+    Point p16(3, 3);
+    Point p17(2, 2);
+    Point p18(1, 1);
+    Line intersect(p15, p16);
+    Line intersect2(p17, p18);
+    REQUIRE(!intersect.isIntersecting(intersect2));
+
+    Point p19(2, 2);
+    Point p20(5, 3);
+    Point p21(2, 2);
+    Point p22(0, 10);
+    Line intersect3(p19, p20);
+    Line intersect4(p21, p22);
+    REQUIRE(intersect3.isIntersecting(intersect4));
+
 };
 
