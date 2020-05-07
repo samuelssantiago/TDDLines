@@ -13,6 +13,11 @@ Line::Line(Point ip1, Point ip2)
 {
     slope = generateSlope();
     yIntercept = generateYIntercept();
+    if (ip2.getXCoord() < ip1.getXCoord())
+    {
+        point1 = ip2;
+        point2 = ip1;
+    }
 }
 
 Point Line::getPoint1()
@@ -45,12 +50,21 @@ bool Line::isOnLine(Point p)
 {
     bool retVal = false;
     double ytemp = slope * p.getXCoord() + yIntercept;
-    double deleteme = p.getYCoord();
+    //double deleteme = p.getYCoord();
     double tester = abs(ytemp - p.getYCoord());
-
-    if (tester <= 0.000001)
+    
+    if (p.getXCoord() >= point1.getXCoord() && p.getXCoord() <= point2.getXCoord())
     {
-        retVal = true;
+        
+        double max_y = max(point1.getYCoord(), point2.getYCoord());
+        double min_y = min(point1.getYCoord(), point2.getYCoord());
+        if (p.getYCoord() >= min_y && p.getYCoord() <= max_y)
+        {
+            if (tester <= 0.000001)
+            {
+                retVal = true;
+            }
+        }
     }
 
     return retVal;
