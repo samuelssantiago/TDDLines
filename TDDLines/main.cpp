@@ -74,11 +74,15 @@ TEST_CASE("Line Tests")
     Point lengthP7(2, 2);
     Point lengthP8(7, 8);
     Point length9(4, 4);
+    Point test_same(3, 3);
+    Point test_fail(3, 2.999999);
     REQUIRE(ln3.isOnLine(lengthP7));
     REQUIRE(ln3.isOnLine(lengthP6));
     REQUIRE(!ln3.isOnLine(lengthP8));
     REQUIRE(!ln3.isOnLine(length9));
-
+    REQUIRE(ln3.isOnLine(test_same));
+    REQUIRE(!ln3.isOnLine(test_fail));
+    
     Point p13(2,2);
     Point p14(4,4);
     Line par(p13,p14);
@@ -118,7 +122,6 @@ TEST_CASE("Line Tests")
     Line intersect7(p27, p28);
     Line intersect8(p29, p30);
     REQUIRE(!intersect7.isIntersecting(intersect8));
-
 
 };
 

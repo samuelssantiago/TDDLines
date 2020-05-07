@@ -60,7 +60,7 @@ bool Line::isOnLine(Point p)
         double min_y = min(point1.getYCoord(), point2.getYCoord());
         if (p.getYCoord() >= min_y && p.getYCoord() <= max_y)
         {
-            if (tester <= 0.000001)
+            if (tester <= 0.000000001)
             {
                 retVal = true;
             }
